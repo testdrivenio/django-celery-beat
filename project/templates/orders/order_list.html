@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Orders</title>
+  </head>
+
+  <body>
+    <h1>Orders</h1>
+    {% for order in order_list %}
+      <div>
+        {{ order.added }} - {{ order.product }}
+      </div>
+    {% empty %}
+      No orders found!
+    {% endfor %}
+  </body>
+</html>
