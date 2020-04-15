@@ -1,0 +1,42 @@
+[
+  {
+    "model": "orders.product",
+    "pk": "0102b1c3-fa49-4793-8292-66996506522a",
+    "fields": {
+      "added": "2020-04-15T09:52:03.538Z",
+      "edited": "2020-04-15T09:52:03.538Z",
+      "title": "Rice",
+      "description": "Basmati rice"
+    }
+  },
+  {
+    "model": "orders.product",
+    "pk": "41f16514-8ab9-4ea7-b205-335ccf16a260",
+    "fields": {
+      "added": "2020-04-15T09:54:05.968Z",
+      "edited": "2020-04-15T09:54:05.968Z",
+      "title": "Baked beans",
+      "description": "Baked beans in Tomato Sauce"
+    }
+  },
+  {
+    "model": "orders.product",
+    "pk": "6c51a182-0ce8-4671-a2e7-e82724da74be",
+    "fields": {
+      "added": "2020-04-15T09:51:49.789Z",
+      "edited": "2020-04-15T09:51:49.789Z",
+      "title": "Coffee",
+      "description": "Dark roasted coffee"
+    }
+  },
+  {
+    "model": "orders.product",
+    "pk": "a1e4cc76-19f3-4a1b-a98c-2a31cc1dc953",
+    "fields": {
+      "added": "2020-04-15T09:53:28.358Z",
+      "edited": "2020-04-15T09:53:28.358Z",
+      "title": "Potatoes",
+      "description": "King Edward potatoes"
+    }
+  }
+]
