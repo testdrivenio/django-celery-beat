@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+from celery.schedules import crontab
+
+import core.tasks
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -113,3 +118,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = "/staticfiles/"
+
+CELERY_BROKER_URL = "redis://redis:6379"
+CELERY_RESULT_BACKEND = "redis://redis:6379"
+CELERY_BEAT_SCHEDULE = {
+    "sample_task": {
+        "task": "core.tasks.sample_task",
+        "schedule": crontab(minute="*/1"),
+    },
+    "send_email_report": {
+        "task": "core.tasks.send_email_report",
+        "schedule": crontab(hour="*/1"),
+    },
+}
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+DEFAULT_FROM_EMAIL = "noreply@email.com"
+ADMINS = [("testuser", "test.user@email.com"), ]
